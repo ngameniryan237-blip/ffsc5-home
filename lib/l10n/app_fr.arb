@@ -1,0 +1,199 @@
+{
+  "@@locale": "fr",
+  "appName": "Zenith Bien-Être",
+  "navDashboard": "Tableau de bord",
+  "navHabits": "Habitudes",
+  "navWorkouts": "Entraînements",
+  "navStore": "Boutique",
+  "navAnalytics": "Analyses",
+  "navSettings": "Paramètres",
+
+  "dashboardTitle": "Parcours du Jour",
+  "dashboardSubtitle": "Maintenez votre élan",
+  "dailyStreak": "Série de {count} jours",
+  "@dailyStreak": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "activityScore": "Activité Quotidienne",
+  "completionRate": "{rate}% complété",
+  "@completionRate": {
+    "placeholders": {
+      "rate": {
+        "type": "int"
+      }
+    }
+  },
+  "todayHabits": "Habitudes d'aujourd'hui",
+  "viewAll": "Voir tout",
+  "quickActions": "Actions Rapides",
+  "logWater": "Ajouter Eau",
+  "logCalories": "Ajouter Calories",
+  "startWorkout": "Démarrer Séance",
+  "waterLogged": "Eau : {amount}ml",
+  "@waterLogged": {
+    "placeholders": {
+      "amount": {
+        "type": "int"
+      }
+    }
+  },
+  "caloriesBurned": "Brûlées : {calories} kcal",
+  "@caloriesBurned": {
+    "placeholders": {
+      "calories": {
+        "type": "int"
+      }
+    }
+  },
+  "activeMinutes": "Actif : {minutes} mins",
+  "@activeMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+
+  "habitsTitle": "Suivi des Habitudes",
+  "allHabits": "Toutes",
+  "habitCategoryMind": "Pleine Conscience",
+  "habitCategoryBody": "Forme Physique",
+  "habitCategoryProductivity": "Productivité",
+  "habitCategoryNutrition": "Nutrition",
+  "addHabit": "Ajouter Habitude",
+  "editHabit": "Modifier Habitude",
+  "habitName": "Nom de l'habitude",
+  "habitCategory": "Catégorie",
+  "habitTargetDays": "Jours cibles par semaine",
+  "habitCreated": "Habitude créée avec succès",
+  "habitDeleted": "Habitude supprimée",
+  "noHabitsFound": "Aucune habitude trouvée. Appuyez sur + pour en créer une !",
+  "markComplete": "Marquer comme terminé",
+  "markIncomplete": "Marquer comme non terminé",
+  "streakDays": "{streak} jours",
+  "@streakDays": {
+    "placeholders": {
+      "streak": {
+        "type": "int"
+      }
+    }
+  },
+
+  "workoutsTitle": "Studio d'Entraînement",
+  "searchWorkouts": "Rechercher un entraînement...",
+  "filterAll": "Tous les entraînements",
+  "filterHiit": "HIIT",
+  "filterYoga": "Yoga",
+  "filterStrength": "Musculation",
+  "filterCardio": "Cardio",
+  "durationMinutes": "{minutes} min",
+  "@durationMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "intensityEasy": "Débutant",
+  "intensityMedium": "Intermédiaire",
+  "intensityHard": "Avancé",
+  "startSession": "Commencer la séance",
+  "pauseSession": "Pause",
+  "resumeSession": "Reprendre",
+  "finishSession": "Terminer l'entraînement",
+  "workoutCompleted": "Entraînement Terminé !",
+  "caloriesEarned": "Vous avez brûlé {calories} calories",
+  "@caloriesEarned": {
+    "placeholders": {
+      "calories": {
+        "type": "int"
+      }
+    }
+  },
+  "noWorkoutsFound": "Aucun entraînement ne correspond à votre filtre",
+
+  "storeTitle": "Boutique Bien-Être",
+  "searchProducts": "Rechercher équipements, compléments...",
+  "categoryAll": "Tous",
+  "categoryNutrition": "Nutrition",
+  "categoryEquipment": "Équipement",
+  "categoryApparel": "Vêtements",
+  "addToCart": "Ajouter au Panier",
+  "addedToCart": "Ajouté au panier",
+  "cartTitle": "Panier d'Achat",
+  "emptyCart": "Votre panier est vide",
+  "subtotal": "Sous-total",
+  "discount": "Remise",
+  "tax": "Taxe estimée (5%)",
+  "total": "Total",
+  "promoCode": "Code Promo",
+  "apply": "Appliquer",
+  "promoApplied": "Remise de 20% appliquée !",
+  "promoInvalid": "Code promo invalide",
+  "checkout": "Passer la commande",
+  "orderSuccessful": "Commande Passée avec Succès !",
+  "orderMessage": "Merci de soutenir votre parcours bien-être.",
+  "itemsCount": "{count} articles",
+  "@itemsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+
+  "analyticsTitle": "Analyses de Performance",
+  "weeklyOverview": "Régularité Hebdomadaire",
+  "completionTrend": "Tendance de Réalisation",
+  "categoryDistribution": "Répartition des Objectifs",
+  "weeklyAverage": "Moyenne Hebdomadaire : {rate}%",
+  "@weeklyAverage": {
+    "placeholders": {
+      "rate": {
+        "type": "int"
+      }
+    }
+  },
+  "totalWorkoutsDone": "Entraînements Complétés : {count}",
+  "@totalWorkoutsDone": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "totalMinutesExercised": "Temps Total d'Exercice : {mins}m",
+  "@totalMinutesExercised": {
+    "placeholders": {
+      "mins": {
+        "type": "int"
+      }
+    }
+  },
+
+  "settingsTitle": "Paramètres & Préférences",
+  "preferences": "Préférences",
+  "language": "Langue",
+  "english": "English",
+  "french": "Français",
+  "themeMode": "Mode Thème",
+  "themeSystem": "Défaut Système",
+  "themeLight": "Mode Clair",
+  "themeDark": "Mode Sombre",
+  "accessibility": "Accessibilité",
+  "highContrast": "Mode Contraste Élevé",
+  "reduceAnimations": "Réduire les Animations",
+  "account": "Compte & Données",
+  "resetData": "Réinitialiser les Données",
+  "resetDataConfirm": "Voulez-vous vraiment réinitialiser toutes les habitudes ?",
+  "cancel": "Annuler",
+  "confirm": "Confirmer",
+  "dataResetSuccess": "Données réinitialisées",
+  "aboutApp": "À propos de Zenith",
+  "appVersion": "Version 1.2.0 (Production)",
+  "developedBy": "Conçu avec Flutter pour une haute performance et accessibilité."
+}
