@@ -1,6 +1,6 @@
 # 🌿 Zenith Wellness & Habit Tracker
 
-[![Flutter CI](https://github.com/abbuss11/flutterfiresummer/actions/workflows/flutter_ci.yml/badge.svg)](https://github.com/abbuss11/flutterfiresummer/actions)
+[![Flutter CI](https://github.com/ngameniryan237-blip/ffsc5-home/actions/workflows/flutter_ci.yml/badge.svg)](https://github.com/ngameniryan237-blip/ffsc5-home/actions)
 [![Flutter](https://img.shields.io/badge/Flutter-3.38+-02569B?logo=flutter)](https://flutter.dev)
 [![Dart](https://img.shields.io/badge/Dart-3.10+-0175C2?logo=dart)](https://dart.dev)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
@@ -112,19 +112,19 @@ The project includes **35 automated tests** covering unit logic, widget renderin
 
 | Test Category | File | Description |
 |---|---|---|
-| **Unit** | [`habit_provider_test.dart`](file:///e:/flutterfiresummer/project%205/test/unit/habit_provider_test.dart) | Habit creation, streak calculations, toggle completion, deletion, category filtering |
-| **Unit** | [`workout_provider_test.dart`](file:///e:/flutterfiresummer/project%205/test/unit/workout_provider_test.dart) | Workout filters, search query parsing, session timer, calorie burn tracking |
-| **Unit** | [`store_provider_test.dart`](file:///e:/flutterfiresummer/project%205/test/unit/store_provider_test.dart) | Cart quantity stepper, subtotal/tax math, `ZENITH20` & `WELCOME10` promo codes |
-| **Unit** | [`settings_provider_test.dart`](file:///e:/flutterfiresummer/project%205/test/unit/settings_provider_test.dart) | Locale switching (EN/FR), theme modes, high contrast, and animation settings |
-| **Unit** | [`analytics_test.dart`](file:///e:/flutterfiresummer/project%205/test/unit/analytics_test.dart) | Health score algorithm, weekly completion averages, category distributions |
-| **Widget** | [`habit_card_test.dart`](file:///e:/flutterfiresummer/project%205/test/widget/habit_card_test.dart) | Visual rendering, streak badges, strike-through, checkmark toggle interaction |
-| **Widget** | [`metric_card_test.dart`](file:///e:/flutterfiresummer/project%205/test/widget/metric_card_test.dart) | Metric values, titles, subtitles, icons, accessibility semantics |
-| **Widget** | [`workout_card_test.dart`](file:///e:/flutterfiresummer/project%205/test/widget/workout_card_test.dart) | Workout details, difficulty badges, duration, play button navigation |
-| **Widget** | [`cart_item_tile_test.dart`](file:///e:/flutterfiresummer/project%205/test/widget/cart_item_tile_test.dart) | Product info, quantity increase/decrease buttons, item removal |
-| **Widget** | [`empty_state_test.dart`](file:///e:/flutterfiresummer/project%205/test/widget/empty_state_test.dart) | Localized empty view rendering and action button callbacks |
-| **Widget** | [`app_smoke_test.dart`](file:///e:/flutterfiresummer/project%205/test/widget/app_smoke_test.dart) | App initialization and navigation across all 6 bottom tabs |
-| **Integration** | [`habit_flow_integration_test.dart`](file:///e:/flutterfiresummer/project%205/test/integration/habit_flow_integration_test.dart) | Complete user flow: toggle habit on dashboard, create habit, switch language to French |
-| **Integration** | [`store_checkout_integration_test.dart`](file:///e:/flutterfiresummer/project%205/test/integration/store_checkout_integration_test.dart) | Complete user flow: browse catalog, add item, apply promo code, complete checkout |
+| **Unit** | [`habit_provider_test.dart`](test/unit/habit_provider_test.dart) | Habit creation, streak calculations, toggle completion, deletion, category filtering |
+| **Unit** | [`workout_provider_test.dart`](test/unit/workout_provider_test.dart) | Workout filters, search query parsing, session timer, calorie burn tracking |
+| **Unit** | [`store_provider_test.dart`](test/unit/store_provider_test.dart) | Cart quantity stepper, subtotal/tax math, `ZENITH20` & `WELCOME10` promo codes |
+| **Unit** | [`settings_provider_test.dart`](test/unit/settings_provider_test.dart) | Locale switching (EN/FR), theme modes, high contrast, and animation settings |
+| **Unit** | [`analytics_test.dart`](test/unit/analytics_test.dart) | Health score algorithm, weekly completion averages, category distributions |
+| **Widget** | [`habit_card_test.dart`](test/widget/habit_card_test.dart) | Visual rendering, streak badges, strike-through, checkmark toggle interaction |
+| **Widget** | [`metric_card_test.dart`](test/widget/metric_card_test.dart) | Metric values, titles, subtitles, icons, accessibility semantics |
+| **Widget** | [`workout_card_test.dart`](test/widget/workout_card_test.dart) | Workout details, difficulty badges, duration, play button navigation |
+| **Widget** | [`cart_item_tile_test.dart`](test/widget/cart_item_tile_test.dart) | Product info, quantity increase/decrease buttons, item removal |
+| **Widget** | [`empty_state_test.dart`](test/widget/empty_state_test.dart) | Localized empty view rendering and action button callbacks |
+| **Widget** | [`app_smoke_test.dart`](test/widget/app_smoke_test.dart) | App initialization and navigation across all 6 bottom tabs |
+| **Integration** | [`habit_flow_integration_test.dart`](test/integration/habit_flow_integration_test.dart) | Complete user flow: toggle habit on dashboard, create habit, switch language to French |
+| **Integration** | [`store_checkout_integration_test.dart`](test/integration/store_checkout_integration_test.dart) | Complete user flow: browse catalog, add item, apply promo code, complete checkout |
 
 ---
 
@@ -137,7 +137,7 @@ The project includes **35 automated tests** covering unit logic, widget renderin
 ### Installation
 ```bash
 # 1. Clone repository
-git clone https://github.com/abbuss11/flutterfiresummer.git
+git clone https://github.com/ngameniryan237-blip/ffsc5-home.git
 cd "project 5"
 
 # 2. Install dependencies

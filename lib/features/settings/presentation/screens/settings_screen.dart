@@ -73,70 +73,80 @@ class SettingsScreen extends StatelessWidget {
                 width: 1,
               ),
             ),
-            child: Column(
-              children: [
-                ListTile(
-                  leading: const Icon(Icons.language, color: Color(0xFF10B981)),
-                  title: Text(l10n.language, style: const TextStyle(fontWeight: FontWeight.bold)),
-                  subtitle: Text(
-                    settings.locale.languageCode == 'en' ? l10n.english : l10n.french,
+            clipBehavior: Clip.antiAlias,
+            child: Material(
+              type: MaterialType.transparency,
+              child: Column(
+                children: [
+                  ListTile(
+                    leading:
+                        const Icon(Icons.language, color: Color(0xFF10B981)),
+                    title: Text(l10n.language,
+                        style: const TextStyle(fontWeight: FontWeight.bold)),
+                    subtitle: Text(
+                      settings.locale.languageCode == 'en'
+                          ? l10n.english
+                          : l10n.french,
+                    ),
+                    trailing: SegmentedButton<String>(
+                      segments: [
+                        ButtonSegment(value: 'en', label: Text(l10n.english)),
+                        ButtonSegment(value: 'fr', label: Text(l10n.french)),
+                      ],
+                      selected: {settings.locale.languageCode},
+                      onSelectionChanged: (val) {
+                        settings.setLocale(Locale(val.first));
+                      },
+                    ),
                   ),
-                  trailing: SegmentedButton<String>(
-                    segments: [
-                      ButtonSegment(value: 'en', label: Text(l10n.english)),
-                      ButtonSegment(value: 'fr', label: Text(l10n.french)),
-                    ],
-                    selected: {settings.locale.languageCode},
-                    onSelectionChanged: (val) {
-                      settings.setLocale(Locale(val.first));
-                    },
+                  const Divider(height: 1),
+                  // Theme Mode Selector
+                  Padding(
+                    padding: const EdgeInsets.all(16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            const Icon(Icons.palette_outlined,
+                                color: Color(0xFF6366F1)),
+                            const SizedBox(width: 12),
+                            Text(
+                              l10n.themeMode,
+                              style: const TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 16),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 12),
+                        SegmentedButton<ThemeMode>(
+                          segments: [
+                            ButtonSegment(
+                              value: ThemeMode.system,
+                              label: Text(l10n.themeSystem),
+                              icon: const Icon(Icons.brightness_auto, size: 16),
+                            ),
+                            ButtonSegment(
+                              value: ThemeMode.light,
+                              label: Text(l10n.themeLight),
+                              icon: const Icon(Icons.light_mode, size: 16),
+                            ),
+                            ButtonSegment(
+                              value: ThemeMode.dark,
+                              label: Text(l10n.themeDark),
+                              icon: const Icon(Icons.dark_mode, size: 16),
+                            ),
+                          ],
+                          selected: {settings.themeMode},
+                          onSelectionChanged: (val) {
+                            settings.setThemeMode(val.first);
+                          },
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-                const Divider(height: 1),
-                // Theme Mode Selector
-                Padding(
-                  padding: const EdgeInsets.all(16),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          const Icon(Icons.palette_outlined, color: Color(0xFF6366F1)),
-                          const SizedBox(width: 12),
-                          Text(
-                            l10n.themeMode,
-                            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 12),
-                      SegmentedButton<ThemeMode>(
-                        segments: [
-                          ButtonSegment(
-                            value: ThemeMode.system,
-                            label: Text(l10n.themeSystem),
-                            icon: const Icon(Icons.brightness_auto, size: 16),
-                          ),
-                          ButtonSegment(
-                            value: ThemeMode.light,
-                            label: Text(l10n.themeLight),
-                            icon: const Icon(Icons.light_mode, size: 16),
-                          ),
-                          ButtonSegment(
-                            value: ThemeMode.dark,
-                            label: Text(l10n.themeDark),
-                            icon: const Icon(Icons.dark_mode, size: 16),
-                          ),
-                        ],
-                        selected: {settings.themeMode},
-                        onSelectionChanged: (val) {
-                          settings.setThemeMode(val.first);
-                        },
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
           const SizedBox(height: 24),
@@ -153,30 +163,38 @@ class SettingsScreen extends StatelessWidget {
                 width: 1,
               ),
             ),
-            child: Column(
-              children: [
-                SwitchListTile(
-                  secondary: const Icon(Icons.contrast, color: Color(0xFFF59E0B)),
-                  title: Text(
-                    l10n.highContrast,
-                    style: const TextStyle(fontWeight: FontWeight.bold),
+            clipBehavior: Clip.antiAlias,
+            child: Material(
+              type: MaterialType.transparency,
+              child: Column(
+                children: [
+                  SwitchListTile(
+                    secondary:
+                        const Icon(Icons.contrast, color: Color(0xFFF59E0B)),
+                    title: Text(
+                      l10n.highContrast,
+                      style: const TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    subtitle: const Text(
+                        'Enhance borders and text clarity for WCAG compliance'),
+                    value: settings.isHighContrast,
+                    onChanged: (val) => settings.setHighContrast(val),
                   ),
-                  subtitle: const Text('Enhance borders and text clarity for WCAG compliance'),
-                  value: settings.isHighContrast,
-                  onChanged: (val) => settings.setHighContrast(val),
-                ),
-                const Divider(height: 1),
-                SwitchListTile(
-                  secondary: const Icon(Icons.motion_photos_off, color: Color(0xFF8B5CF6)),
-                  title: Text(
-                    l10n.reduceAnimations,
-                    style: const TextStyle(fontWeight: FontWeight.bold),
+                  const Divider(height: 1),
+                  SwitchListTile(
+                    secondary: const Icon(Icons.motion_photos_off,
+                        color: Color(0xFF8B5CF6)),
+                    title: Text(
+                      l10n.reduceAnimations,
+                      style: const TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    subtitle: const Text(
+                        'Minimize motion transitions for reduced visual strain'),
+                    value: settings.reduceAnimations,
+                    onChanged: (val) => settings.setReduceAnimations(val),
                   ),
-                  subtitle: const Text('Minimize motion transitions for reduced visual strain'),
-                  value: settings.reduceAnimations,
-                  onChanged: (val) => settings.setReduceAnimations(val),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
           const SizedBox(height: 24),
@@ -193,15 +211,21 @@ class SettingsScreen extends StatelessWidget {
                 width: 1,
               ),
             ),
-            child: ListTile(
-              leading: const Icon(Icons.restore, color: Colors.red),
-              title: Text(
-                l10n.resetData,
-                style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.red),
+            clipBehavior: Clip.antiAlias,
+            child: Material(
+              type: MaterialType.transparency,
+              child: ListTile(
+                leading: const Icon(Icons.restore, color: Colors.red),
+                title: Text(
+                  l10n.resetData,
+                  style: const TextStyle(
+                      fontWeight: FontWeight.bold, color: Colors.red),
+                ),
+                subtitle: const Text(
+                    'Restore sample habits, activity, and clear cart'),
+                trailing: const Icon(Icons.chevron_right),
+                onTap: () => _showResetConfirmation(context),
               ),
-              subtitle: const Text('Restore sample habits, activity, and clear cart'),
-              trailing: const Icon(Icons.chevron_right),
-              onTap: () => _showResetConfirmation(context),
             ),
           ),
           const SizedBox(height: 24),
@@ -211,13 +235,15 @@ class SettingsScreen extends StatelessWidget {
               children: [
                 Text(
                   l10n.appVersion,
-                  style: theme.textTheme.bodySmall?.copyWith(fontWeight: FontWeight.bold),
+                  style: theme.textTheme.bodySmall
+                      ?.copyWith(fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 4),
                 Text(
                   l10n.developedBy,
                   style: theme.textTheme.bodySmall?.copyWith(
-                    color: theme.textTheme.bodyMedium?.color?.withValues(alpha: 0.6),
+                    color: theme.textTheme.bodyMedium?.color
+                        ?.withValues(alpha: 0.6),
                   ),
                   textAlign: TextAlign.center,
                 ),
